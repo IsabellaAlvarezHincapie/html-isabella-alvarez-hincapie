@@ -23,11 +23,22 @@ document.addEventListener("DOMContentLoaded", () => {
     for (let i = 0; i < cardsAdj.length; i++) {
       var carta = document.createElement("img");
       carta.setAttribute("src", "images/reverso.png");
-
       carta.setAttribute("data-id", i);
       carta.addEventListener("clisck", voltearCarta);
-
       cuadricula.appendChild(carta);
     }
   }
+  function voltearCarta (){ 
+    var cardId = this.getAttribute("data-id");
+    cartasEscogidas.push(cardsAdj[cardId].name);
+    cartasEscogidasId.push(cardId);
+    this.setAttribute("src", cardsAdj[cardId].img);
+
+    if (cartasEscogidas.lenght === 2) {
+      setTimeout(verificarPareja, 1000);
+    }
+  }
+  crearTablero();
+  
+  
 });
