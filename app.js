@@ -1,17 +1,17 @@
 document.addEventListener("DOMContentLoaded", () => {
   const cardsAdj = [
-    { name: "aeropress", img: "images/aeropress.jpg" },
-    { name: "chemex", img: "images/chemex.jpg" },
-    { name: "moka", img: "images/moka.jpg" },
-    { name: "sifon", img: "images/sifon.jpg" },
-    { name: "ibrik", img: "images/ibrik.jpg" },
-    { name: "hario", img: "images/hario.jpg" },
-    { name: "aeropress", img: "images/aeropress.jpg" },
-    { name: "chemex", img: "images/chemex.jpg" },
-    { name: "moka", img: "images/moka.jpg" },
-    { name: "sifon", img: "images/sifon.jpg" },
-    { name: "ibrik", img: "images/ibrik.jpg" },
-    { name: "hario", img: "images/hario.jpg" }
+    { name: "aeropress", img: "images/aeropress.jpeg" },
+    { name: "chemex", img: "images/chemex.jpeg" },
+    { name: "moka", img: "images/moka.jpeg" },
+    { name: "sifon", img: "images/sifon.jpeg" },
+    { name: "ibrik", img: "images/ibrik.jpeg" },
+    { name: "hario", img: "images/hario.jpeg" },
+    { name: "aeropress", img: "images/aeropress.jpeg" },
+    { name: "chemex", img: "images/chemex.jpeg" },
+    { name: "moka", img: "images/moka.jpeg" },
+    { name: "sifon", img: "images/sifon.jpeg" },
+    { name: "ibrik", img: "images/ibrik.jpeg" },
+    { name: "hario", img: "images/hario.jpeg" }
   ];
 
   const cuadricula = document.querySelector(".cuadricula");
@@ -34,10 +34,8 @@ document.addEventListener("DOMContentLoaded", () => {
     cartasEscogidas.push(cardsAdj[cardId].name);
     cartasEscogidasId.push(cardId);
     this.setAttribute("src", cardsAdj[cardId].img);
-    this.setAttribute("src", cartasTamano);
-
     if (cartasEscogidas.lenght === 2) {
-      setTimeout(verificarpareja, 1000);
+      setTimeout(verificarPareja, 1000);
     }
   }
   crearTablero();
